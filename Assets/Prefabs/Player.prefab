@@ -108,12 +108,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStart: 0
+  isPlay: 0
   moveSpeed: 5
-  myWaypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  points: {fileID: 0}
 --- !u!96 &4796831957894610125
 TrailRenderer:
   serializedVersion: 2
@@ -162,8 +159,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.99393845
+        time: 0.021858215
+        value: 0.14731216
         inSlope: 0
         outSlope: 0
         tangentMode: 0
