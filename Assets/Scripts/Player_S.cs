@@ -19,10 +19,21 @@ public class Player_S : MonoBehaviour
 
     void Update()
     {
-        if ((Input.GetMouseButtonDown(1) || Input.GetTouch(0).phase == TouchPhase.Began) && isStart)    //проверка на возможность начала игры и нажатие правой кнопки мыши или нажатия на экран
+        if (Input.GetMouseButtonDown(1) && isStart)    //проверка на возможность начала игры и нажатие правой кнопки мыши
         {
             isPlay = true;
             points.SpawnPoint();                                                                        //расстановка точек в случайных местах
+        }
+        else if (Input.touchCount > 0)                  //проверка на нажатия на экран
+        {
+            Touch touch = Input.GetTouch(0);
+
+            if (touch.phase == TouchPhase.Began && isStart) //проверка на возможность начала игры и нажатие на экран
+            {
+                isPlay = true;
+                points.SpawnPoint();
+            }
+
         }
     }
 
